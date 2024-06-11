@@ -1,0 +1,62 @@
+@model LoginViewModel
+@{
+    Layout = "_Layout2";
+}
+<main>
+    <div class="container">
+
+      <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-5 col-md-6 d-flex flex-column align-items-center justify-content-center">
+
+           
+
+              <div class="card mb-3 "  style="opacity: 0.9; background-color: rgb(230, 234, 232); border:1px;">
+
+                <div class="card-body">
+
+                  <div class="pt-2 pb-2">
+                    <h5 class="card-title text-center pb-0 fs-4 text-black">Giriş Yapmak İçin</h5>
+                    <p class="text-center small text-black">Kullanıcı Adı & Şifre Giriniz</p>
+                  </div>
+
+                  <form class="row g-3 " asp-controller="Account" asp-action="Login"  method="post">
+                    <div asp-validation-summary="All" class="text-light" style="opacity: 1;"></div>
+                
+                    <div class="col-12">
+                      <label  asp-for="Email" class="form-label text-black">E-Mail</label>
+                      <div class="input-group has-validation">
+                      
+
+                        <input asp-for="Email" class="form-control"  >
+                    
+                      </div>
+                    </div>
+
+                    <div class="col-12">
+                      <label asp-for="Password" class="form-label text-black">Şifre</label>
+                      <input asp-for="Password" class="form-control" >
+                    </div>
+
+                  
+                    <div class="col-12">
+                      <button class="btn btn-primary w-100" type="submit">Login</button>
+                    </div>
+                    
+                  </form>
+
+                </div>
+              </div>
+
+              <div class="credits text-black">  Designed by <a href="/" style="text-decoration: none; color: rgb(148, 97, 33);">Fatih Yazılım</a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+  </main>

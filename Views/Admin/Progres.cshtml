@@ -1,0 +1,30 @@
+@model Progres
+
+
+
+<form  asp-action="Progres" method="post" >
+    <div asp-validation-summary="All"></div>
+
+ 
+    
+      <div class="mb-3">
+        <label asp-for="Value" class="form-label"></label>
+        <input asp-for="Value" class="form-control">
+        <span asp-validation-for="Value" class="text-danger"></span>
+
+    </div>
+   
+     <div class="mb-3">
+        <label asp-for="Title" class="form-label"></label>
+        <input asp-for="Title" class="form-control">
+        <span asp-validation-for="Title" class="text-danger"></span>
+
+    </div>
+  
+     
+   
+
+   
+    <button type="submit" class="btn btn-primary">Kaydet</button>
+    <a href="/Admin/AboutList" class="btn btn-danger"> Geri</a>
+</form>

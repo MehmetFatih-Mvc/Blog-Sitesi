@@ -1,0 +1,144 @@
+@model AnaViewModel
+
+
+  <h2>Hakkımızda</h2>
+    <table class="table mt-5">
+        <br>
+        <br>
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th> Birthday</th>
+            <th scope="col">Image</th>
+            <th scope="col">Phone</th>
+            <th>City</th>
+            <th scope="col" style="width: 175px;"></th>
+          </tr>
+        </thead>
+        <tbody>
+            @foreach(var list in Model.Abouts){
+                <tr>
+                   <td>@list.AboutId</td>
+                   <td>@list.Birthday</td>
+                    <td><img src="~/assets/img/@list.Resim" alt="" srcset="" style="width: 70px; height: 60px;"></td>
+                    <td>@list.Phone</td>
+                    <td>@list.City</td>
+                    <td>
+                        <a href="/Admin/AboutEdit/@list.AboutId" class="btn btn-primary">Edit</a>
+                        <a href="" class="btn btn-danger">Delete</a>
+                    </td>
+                  </tr>
+            }
+   
+       
+        </tbody>
+      </table>
+
+
+
+
+      <h2 class="mt-5">Faktorler</h2>
+    <table class="table mt-5">
+        <br>
+        <br>
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th> Açıklama</th>
+            <th scope="col">Title</th>
+            <th scope="col">İcon</th>
+            <th>Value</th>
+            <th scope="col" style="width: 175px;"></th>
+          </tr>
+        </thead>
+        <tbody>
+            @foreach(var list in Model.Factss){
+                <tr>
+                   <td>@list.FactsId</td>
+                   <td>@list.Açıklama</td>
+                   <td>@list.Title</td>
+                    <td>@list.İcon</td>
+                    <td>@list.Value</td>
+                    <td>
+                        <a href="/Admin/AboutEdit/@list.FactsId" class="btn btn-primary">Edit</a>
+                        <a href="" class="btn btn-danger">Delete</a>
+                    </td>
+                  </tr>
+            }
+   
+       
+        </tbody>
+      </table>
+
+
+
+         <h2 class="mt-5">Progres</h2>
+    <table class="table mt-5">
+        <br>
+        <br>
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+         
+            <th scope="col">Title</th>
+        
+            <th>Value</th>
+            <th scope="col" style="width: 175px;"></th>
+          </tr>
+        </thead>
+        <tbody>
+            @foreach(var list in Model.Progres){
+                <tr>
+                   <td>@list.ProgresId</td>
+                   
+                   <td>@list.Title</td>
+                   
+                    <td>@list.Value</td>
+                    <td>
+                        <a href="/Admin/AboutEdit/@list.ProgresId" class="btn btn-primary">Edit</a>
+                        <a href="" class="btn btn-danger">Delete</a>
+                    </td>
+                  </tr>
+            }
+   
+       
+        </tbody>
+      </table>
+
+
+
+    
+
+
+  <h2>Galeri</h2>
+    <table class="table mt-5">
+        <br>
+        <br>
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th> Title</th>
+            <th scope="col">Image</th>
+            <th scope="col">Açıklama</th>
+           
+            <th scope="col" style="width: 175px;"></th>
+          </tr>
+        </thead>
+        <tbody>
+            @foreach(var list in Model.Galeri){
+                <tr>
+                   <td>@list.GaleriId</td>
+                   <td>@list.Title</td>
+                    <td><img src="~/assets/galeri/@list.Resim" alt="" srcset="" style="width: 70px; height: 60px;"></td>
+                    <td>@list.Açıklama</td>
+                    
+                    <td>
+                        <a href="/Admin/GaleriEdit/@list.GaleriId" class="btn btn-primary">Edit</a>
+                        <a href="" class="btn btn-danger">Delete</a>
+                    </td>
+                  </tr>
+            }
+   
+       
+        </tbody>
+      </table>

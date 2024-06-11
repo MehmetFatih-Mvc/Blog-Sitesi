@@ -1,0 +1,31 @@
+@model User
+
+<h2>Kullanıcı Kayıt</h2>
+<hr>
+
+<form asp-controller="Account" asp-action="Create" method="post">
+    <div class="text-danger" asp-validation-summary="All"></div> 
+    <div class="mb-3">
+
+        <label asp-for="Name" class="label-control"></label>
+        <input asp-for="Name" class="form-control">
+    </div>
+
+    <div class="mb-3">
+
+        <label asp-for="Email" class="label-control"></label>
+        <input asp-for="Email" class="form-control">
+    </div>
+
+    <div class="mb-3">
+
+        <label asp-for="Pasword" class="label-control"></label>
+        <input asp-for="Pasword" class="form-control">
+    </div>
+   
+
+
+
+
+    <button type="submit" class="btn btn-primary">Kaydet</button>
+</form>

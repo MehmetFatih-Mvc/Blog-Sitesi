@@ -1,0 +1,66 @@
+@model About
+
+<form  asp-action="AboutCreate" method="post" enctype="multipart/form-data" >
+    <div asp-validation-summary="All"></div>
+    <div class="mb-3">
+        <label asp-for="Phone" class="form-label"></label>
+        <input asp-for="Phone" class="form-control">
+        <span asp-validation-for="Phone" class="text-danger"></span>
+
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="City" class="form-label"></label>
+        <input asp-for="City" class="form-control">
+        <span asp-validation-for="City" class="text-danger"></span>
+
+    </div>
+      <div class="mb-3">
+        <label asp-for="Age" class="form-label"></label>
+        <input asp-for="Age" class="form-control">
+        <span asp-validation-for="Age" class="text-danger"></span>
+
+    </div>
+      <div class="mb-3">
+        <label asp-for="Degree" class="form-label"></label>
+        <input asp-for="Degree" class="form-control">
+        <span asp-validation-for="Degree" class="text-danger"></span>
+
+    </div>
+      <div class="mb-3">
+        <label asp-for="PhEmailone" class="form-label"></label>
+        <input asp-for="PhEmailone" class="form-control">
+        <span asp-validation-for="PhEmailone" class="text-danger"></span>
+
+    </div>
+     <div class="mb-3">
+        <label asp-for="Birthday" class="form-label"></label>
+        <input asp-for="Birthday" class="form-control">
+        <span asp-validation-for="Birthday" class="text-danger"></span>
+
+    </div>
+  
+      <div class="mb-3">
+        <label asp-for="Açıklamaiki" class="form-label"></label>
+        <input asp-for="Açıklamaiki" class="form-control">
+        <span asp-validation-for="Açıklamaiki" class="text-danger"></span>
+
+    </div>
+
+      <div class="mb-3">
+        <label asp-for="Açıklamaüç" class="form-label"></label>
+        <input asp-for="Açıklamaüç" class="form-control">
+        <span asp-validation-for="Açıklamaüç" class="text-danger"></span>
+
+    </div>
+
+ <div class="input-group mb-3">
+    <input type="file" name="imageFile" id="imageFile"  class="form-control">
+   
+    </div> 
+   
+
+   
+    <button type="submit" class="btn btn-primary">Kaydet</button>
+    <a href="/Admin/AboutList" class="btn btn-danger"> Geri</a>
+</form>

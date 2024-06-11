@@ -1,0 +1,36 @@
+@model AnaViewModel
+  <h2>Mesajlar</h2>
+    <table class="table">
+        <br>
+        <br>
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th> Name</th>
+            <th scope="col">Konu</th>
+            
+            <th scope="col" style="width: 175px;"></th>
+          </tr>
+        </thead>
+        <tbody>
+            @foreach(var list in Model.Contents){
+                <tr>
+                   <td>@list.ContentId</td>
+                   <td>@list.Name</td>
+                   <td>@list.Konu</td>
+                   
+                    <td>
+                        <a href="" class="btn btn-primary">Edit</a>
+                        <a href="" class="btn btn-danger">Delete</a>
+                    </td>
+                  </tr>
+            
+   }
+       
+        </tbody>
+      </table>
+
+
+
+
+     
